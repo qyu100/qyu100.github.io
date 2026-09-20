@@ -23,17 +23,18 @@
   --ink:#1B2430;
   --muted:#6E7783;
   --rule:#E3E3DC;
+  --venue:#454E59;
   --accent:#7C2D2D;
   --serif:'Source Serif 4','Iowan Old Style',Georgia,'Songti SC','Times New Roman',serif;
   --sans:'IBM Plex Sans',-apple-system,'Segoe UI','PingFang SC',system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#15181C; --ink:#E6E4DF; --muted:#99A1AA; --rule:#2A2F35; --accent:#E3A9A0;
+    --paper:#15181C; --ink:#E6E4DF; --muted:#99A1AA; --rule:#2A2F35; --venue:#C6CBD1; --accent:#E3A9A0;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#15181C; --ink:#E6E4DF; --muted:#99A1AA; --rule:#2A2F35; --accent:#E3A9A0;
+  --paper:#15181C; --ink:#E6E4DF; --muted:#99A1AA; --rule:#2A2F35; --venue:#C6CBD1; --accent:#E3A9A0;
 }
 *,*::before,*::after{box-sizing:inherit}
 html{-webkit-text-size-adjust:100%}
@@ -68,7 +69,8 @@ p{margin:0 0 1.1rem}
 .t a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .meta{font-family:var(--sans);font-size:.88rem;color:var(--muted);margin:.2rem 0 0;line-height:1.65;text-wrap:pretty}
 .me{font-weight:500;color:var(--ink)}
-.venue{font-style:italic}
+.venue-line{color:var(--venue)}
+.venue{font-weight:600}
 .note{font-family:var(--sans);font-size:.84rem;color:var(--muted);margin:0 0 1.6rem;line-height:1.6}
 .tag{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--accent);display:inline-block;margin-top:.5rem}
 .tag a{color:inherit;border-bottom-color:color-mix(in srgb,var(--accent) 45%,transparent)}
@@ -129,7 +131,7 @@ footer{font-family:var(--sans);font-size:.84rem;color:var(--muted);border-top:1p
         <div class="entry-body">
           <p class="t"><a href="https://arxiv.org/abs/2606.14404">Simple-IT: Practical Low-Latency Signature-Free BFT Consensus</a></p>
           <p class="meta"><span class="me">Qianyu Yu</span>, Juan Villacis, Giuliano Losa, Zhuolun Xiang, Xuechao Wang<br>
-            <span class="venue">IEEE S&amp;P</span> 2027, to appear</p>
+            <span class="venue-line"><span class="venue">IEEE Symposium on Security and Privacy (S&amp;P)</span> 2027, to appear</span></p>
         </div>
       </div>
 
@@ -137,7 +139,7 @@ footer{font-family:var(--sans);font-size:.84rem;color:var(--muted);border-top:1p
         <div class="entry-body">
           <p class="t"><a href="https://arxiv.org/abs/2509.15847">Angelfish: Leader, DAG, or Anywhere in Between</a></p>
           <p class="meta"><span class="me">Qianyu Yu</span>, Giuliano Losa, Nibesh Shrestha, Xuechao Wang<br>
-            <span class="venue">ACM CCS</span> 2026</p>
+            <span class="venue-line"><span class="venue">ACM Conference on Computer and Communications Security (CCS)</span> 2026</span></p>
         </div>
       </div>
 
@@ -145,7 +147,7 @@ footer{font-family:var(--sans);font-size:.84rem;color:var(--muted);border-top:1p
         <div class="entry-body">
           <p class="t"><a href="https://arxiv.org/abs/2505.02761">Optimistic, Signature-Free Reliable Broadcast and Its Applications</a></p>
           <p class="meta">Nibesh Shrestha*, <span class="me">Qianyu Yu</span>*, Aniket Kate, Giuliano Losa, Kartik Nayak, Xuechao Wang<br>
-            <span class="venue">ACM CCS</span> 2025</p>
+            <span class="venue-line"><span class="venue">ACM Conference on Computer and Communications Security (CCS)</span> 2025</span></p>
           <p class="tag"><a href="https://www.sigsac.org/ccs/CCS2025/awards/#:~:text=Optimistic%2C%20Signature%2DFree%20Reliable%20Broadcast%20and%20Its%20Applications">Distinguished Paper Award</a></p>
         </div>
       </div>
@@ -154,7 +156,7 @@ footer{font-family:var(--sans);font-size:.84rem;color:var(--muted);border-top:1p
         <div class="entry-body">
           <p class="t"><a href="https://arxiv.org/abs/2405.02615">TetraBFT: Reducing Latency of Unauthenticated, Responsive BFT Consensus</a></p>
           <p class="meta"><span class="me">Qianyu Yu</span>, Giuliano Losa, Xuechao Wang<br>
-            <span class="venue">ACM PODC</span> 2024</p>
+            <span class="venue-line"><span class="venue">ACM Symposium on Principles of Distributed Computing (PODC)</span> 2024</span></p>
         </div>
       </div>
     </div>
@@ -167,7 +169,7 @@ footer{font-family:var(--sans);font-size:.84rem;color:var(--muted);border-top:1p
         <div class="entry-body">
           <p class="t"><a href="https://arxiv.org/abs/2601.09082">Rigorous and Generalized Proof of Security of Bitcoin Protocol with Bounded Network Delay</a></p>
           <p class="meta">Christopher Blake*, Chen Feng*, Xuechao Wang*, <span class="me">Qianyu Yu</span>*<br>
-            arXiv:2601.09082</p>
+            <span class="venue-line">arXiv:2601.09082</span></p>
         </div>
       </div>
 
@@ -175,7 +177,7 @@ footer{font-family:var(--sans);font-size:.84rem;color:var(--muted);border-top:1p
         <div class="entry-body">
           <p class="t"><a href="https://arxiv.org/abs/2601.09090">Merged Bitcoin: Proof of Work Blockchains with Multiple Hash Types</a></p>
           <p class="meta">Christopher Blake*, Chen Feng*, Xuechao Wang*, <span class="me">Qianyu Yu</span>*<br>
-            arXiv:2601.09090</p>
+            <span class="venue-line">arXiv:2601.09090</span></p>
         </div>
       </div>
 
@@ -194,13 +196,13 @@ footer{font-family:var(--sans);font-size:.84rem;color:var(--muted);border-top:1p
       <div class="entry">
         <div class="entry-body">
           <p class="t">TetraBFT: Reducing Latency of Unauthenticated, Responsive BFT Consensus</p>
-          <p class="meta"><span class="venue">ACM PODC</span> 2024, Nantes, France</p>
+          <p class="meta"><span class="venue">ACM Symposium on Principles of Distributed Computing (PODC)</span> 2024, Nantes, France</p>
         </div>
       </div>
       <div class="entry">
         <div class="entry-body">
           <p class="t">Graph Representation Learning for Merchant Incentive Optimization in Mobile Payment Marketing</p>
-          <p class="meta"><span class="venue">ACM CIKM</span> 2019, Beijing</p>
+          <p class="meta"><span class="venue">ACM Conference on Information and Knowledge Management (CIKM)</span> 2019, Beijing</p>
         </div>
       </div>
     </div>
